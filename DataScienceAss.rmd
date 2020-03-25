@@ -45,3 +45,45 @@ print(income_means)
 
 
 ## Que 6
+Write short notes on cbind and rbind using suitable examples
+
+### ans
+
+#### rbind()
+The name of the rbind R function stands for row-bind. The rbind function can be used to combine several vectors, matrices and/or data frames by rows.
+The easiest way of using rbind in R is the combination of a vector and a data frame
+```{r}
+x1 <- c(7, 4, 4, 9)                  # Column 1 of data frame
+x2 <- c(5, 2, 8, 9)                  # Column 2 of data frame
+x3 <- c(1, 2, 3, 4)                  # Column 3 of data frame
+data_1 <- data.frame(x1, x2, x3)     # Create example data frame
+print(data_1)
+```
+and an example vector:
+```{r}
+vector_1 <- c(9, 8, 7)               # Create example vector
+```
+Now, let’s rbind this vector to the data frame:
+```{r}
+rbind(data_1, vector_1)              # rbind vector to data frame
+print(data_1)
+```
+
+#### cbind()
+The name of the cbind R function stands for column-bind. The cbind function is used to combine vectors, matrices and/or data frames by columns.
+A popular way of using the cbind command in the R programming language is the combination of a vector and a data.frame. 
+```{r}
+data_1 <- data.frame(x1 = c(7, 3, 2, 9, 0),          # Column 1 of data frame
+                     x2 = c(4, 4, 1, 1, 8),          # Column 2 of data frame
+                     x3 = c(5, 3, 9, 2, 4))          # Column 3 of data frame
+```
+and an example vector / column:
+```{r}
+y1 <- c(9, 8, 7, 6, 5)                               # Create vector
+```
+Now, we can cbind this vector as new column to our example data frame:
+```{r}
+data_new1 <- cbind(data_1, y1)                       # cbind vector to data frame
+data_new1                                            # Print data to RStudio console
+```
+
