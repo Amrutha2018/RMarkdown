@@ -12,6 +12,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Que 1
 Complete the following Generic ANOVA table:
+
+![](anova.png)
+
+### ans
+  
+![](ans.png)
+
 ## Que 2
 What     is the difference between a linear model using glm( ) and a linear model using lm( ) in R?
 
