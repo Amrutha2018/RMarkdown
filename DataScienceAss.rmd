@@ -11,8 +11,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Que 1
-
+Complete the following Generic ANOVA table:
 ## Que 2
+What     is the difference between a linear model using glm( ) and a linear model using lm( ) in R?
+
+### ans
+
+#### glm()
+glm() is used to fit generalized linear models, specified by giving a symbolic description of the linear predictor and a description of the error distribution.
+
+#### lm()
+In R, the lm(), or “linear model,” function can be used to create a simple regression model.  
+
+
+In R, using lm() is a special case of glm().
+lm() fits models following the form Y = Xb + e, where e is Normal (0 , s^2^).
+glm() fits models following the form f(Y) = Xb + e. However, in glm both the function f(Y) (the 'link function') and the distribution of the error term e can be specified. Hence the name - 'generalised linear model'.
+If you are getting the same results using both lm() and glm(), it is because for glm(), f(Y) defaults to Y, and e defaults to Normal (0, s^2^). i.e. if you don't specify the link function and error distribution, the parameters that glm() uses produce the same effect as running lm().
 
 ## Que 3
 Solve the following Probability distribution problems using R:
