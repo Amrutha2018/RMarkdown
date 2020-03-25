@@ -17,8 +17,40 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Que 3
 
 ## Que 4
+With     the help of suitable examples explain attach and detach     functions in R for data frames and packages
 
-## Que 5
+### ans
+The attach function allows to access variables of a data frame without calling the data frame.
+Create an example data frame
+```{r}
+data <- data.frame(x1 = c(9, 8, 3, 4, 8),         
+                   x2 = c(5, 4, 7, 1, 1),
+                   x3 = c(1, 2, 3, 4, 5))
+data                                              
+```
+Let’s assume that we want to work with the first column X1. If we try to call the column with the following code, R returns an error message:
+```{r}
+# x1
+# Error: object 'x1' not found
+```
+However, if we attach the data frame first…
+```{r}
+attach(data) 
+x1  
+# 9 8 3 4 8
+```
+After finishing the work on our data frame, it is advisable to detach the data. Otherwise, the R code might get difficult to use afterwards.
+We can detach our data with the following line of code:
+```{r}
+detach(data)
+```
+After detaching, we cannot work with the X1 column as before anymore:
+```{r}
+# x1 
+# Error: object 'x1' not found
+```
+
+# Que 5
 We have a sample of 30 tax accountants from all the states and territories of Australia and their individual state of origin is specified by a character vector of state mnemonics as   
 ```{r}
 state <- c("tas", "sa", "qld", "nsw", "nsw", "nt", "wa", "wa", "qld", "vic", 
