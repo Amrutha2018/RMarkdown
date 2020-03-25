@@ -1,0 +1,47 @@
+---
+title: "Data Science - Assignment"
+author: "Amrutha E"
+date: "25/03/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Que 1
+
+## Que 2
+
+## Que 3
+
+## Que 4
+
+## Que 5
+We have a sample of 30 tax accountants from all the states and territories of Australia and their individual state of origin is specified by a character vector of state mnemonics as   
+```{r}
+state <- c("tas", "sa", "qld", "nsw", "nsw", "nt", "wa", "wa", "qld", "vic", 
+           "nsw", "vic", "qld", "qld", "sa", "tas", "sa", "nt", "wa", "vic", 
+           "qld", "nsw", "nsw", "wa", "sa", "act", "nsw", "vic", "vic", "act")
+```
+We have the incomes of the same tax accountants in another vector (in suitably large units of money)
+```{r}
+incomes <- c(60, 49, 40, 61, 64, 60, 59, 54, 62, 69, 
+             70, 42, 56, 61, 61, 61, 58, 51, 48, 65, 
+             49, 49, 41, 48, 52, 46, 59, 46, 58, 43)
+```
+### ans
+A factor is created using the factor() function
+```{r}
+state_factor <- factor(state)
+print(state_factor)
+```
+To  calculate  the  sample  mean  income  for  each  state  we  can  now  use  the  special function tapply()
+```{r}
+income_means <- tapply(incomes, state_factor, mean)
+print(income_means)
+```
+
+
+## Que 6
